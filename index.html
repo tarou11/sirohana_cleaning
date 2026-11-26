@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>白樺クリーニング｜札幌市白石区・1973年創業の手仕上げクリーニング</title>
+<meta name="description" content="札幌市白石区本通の白樺クリーニング。1973年創業。アイロン掛けはすべて手仕上げ。南郷18丁目駅より徒歩6分。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1c2b30;
+  --teal:#23474d;
+  --teal-deep:#17353a;
+  --mist:#f3f6f6;
+  --line:#d9e1e1;
+  --white:#fff;
+  --muted:#5d6d71;
+  --serif:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.95;letter-spacing:.04em;-webkit-text-size-adjust:100%;line-break:strict;word-break:auto-phrase;overflow-wrap:anywhere;text-wrap:pretty}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+/* 文節単位で折り返す(泣き別れ防止) */
+.ph{display:inline-block}
+.wrap{width:min(1040px,100% - 48px);margin-inline:auto}
+section{padding:112px 0}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:.1em;line-height:1.6;text-wrap:balance}
+h2{font-size:clamp(1.5rem,3.4vw,2rem);margin-bottom:40px}
+p+p{margin-top:1.2em}
+
+/* ファーストビュー(縦書き・背景画像) */
+.fv{position:relative;overflow:hidden;padding:0;height:clamp(520px,50vw,720px);color:#fff;display:flex;align-items:flex-start;
+  /* 画像の黒背景をそのまま表示。被写体(アイロン・湯気)を右へ寄せ、左の黒い余白に白文字を置く */
+  background:#0b0b0b url("images/hero.jpg") no-repeat;background-size:auto 100%;background-position:calc(100% + 12vw) center}
+.fv-inner{position:relative;display:flex;flex-wrap:nowrap;align-items:flex-start;gap:clamp(24px,3.4vw,48px);width:54%;padding:clamp(48px,5vw,72px) 24px 64px clamp(24px,5.5vw,88px)}
+.fv-name{writing-mode:vertical-rl;font-family:var(--serif);font-size:clamp(.8rem,1.05vw,.95rem);letter-spacing:.14em;line-height:1.6;margin-top:clamp(0px,1.4vw,20px);white-space:nowrap}
+.fv-name span{text-combine-upright:all}
+.fv h1{writing-mode:vertical-rl;font-size:clamp(2rem,3.45vw,3.2rem);line-height:1.9;letter-spacing:.14em;white-space:nowrap;text-wrap:nowrap}
+.fv-side{flex:1 1 0;min-width:0;margin-top:clamp(4px,1.2vw,20px);margin-left:clamp(0px,1.6vw,24px)}
+.fv-side p{font-size:clamp(.88rem,1.15vw,1.05rem);line-height:2.05;letter-spacing:.06em}
+.fv :focus-visible{outline-color:#fff}
+.fv-btn{display:inline-block;margin-top:clamp(28px,3.4vw,48px);min-width:254px;padding:17px 28px;background:#fff;color:#111;text-align:center;text-decoration:none;font-size:1rem;letter-spacing:.12em;transition:background .2s}
+.fv-btn:hover{background:#d9e1e1}
+
+.btn{display:inline-block;text-decoration:none;padding:16px 36px;background:var(--teal);color:var(--white);font-size:.95rem;letter-spacing:.12em;border:1px solid var(--teal);transition:background .2s,color .2s;text-align:center}
+.btn:hover{background:var(--teal-deep)}
+.btn.line{background:transparent;color:var(--teal)}
+.btn.line:hover{background:var(--teal);color:var(--white)}
+
+/* こだわり */
+.strengths{border-top:1px solid var(--line)}
+.strengths article{padding:26px 0;border-bottom:1px solid var(--line)}
+.strengths h3{font-size:1.2rem;margin-bottom:14px;color:var(--teal)}
+.strengths p{font-size:.95rem;color:var(--muted)}
+/* 左・右・左の交互配置 */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.split figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.split.right figure{order:2}
+.split figure img.detail{aspect-ratio:1/1;object-position:35% center}
+
+/* 職人の仕事 */
+.craft{background:var(--mist)}
+.craft p{color:var(--muted)}
+
+/* 店のこと */
+.story .wrap{max-width:760px}
+.story .sign{margin-top:32px;font-family:var(--serif);color:var(--teal)}
+
+/* お客様の声 */
+.voice{background:var(--teal-deep);color:var(--white)}
+.voice h2{color:var(--white)}
+.voice-list{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.18)}
+.voice-list blockquote{background:var(--teal-deep);padding:36px 28px;font-size:.92rem;line-height:2}
+.voice-list .star{display:block;font-family:var(--serif);letter-spacing:.3em;margin-bottom:12px;color:#d8e4e4}
+.voice-list .star span{opacity:.3}
+.voice .note{margin-top:20px;font-size:.78rem;color:#b9cccc}
+
+/* 有ればいいなと思うサービス(ご提案) */
+.proposal .tag{display:inline-block;border:1px solid var(--teal);color:var(--teal);font-size:.8rem;letter-spacing:.14em;padding:2px 14px;margin-bottom:20px}
+.proposal .lead{max-width:44em;color:var(--muted);margin-bottom:56px}
+.proposal h3{font-size:1.25rem;color:var(--teal);margin-bottom:24px}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);counter-reset:s}
+.steps li{padding:28px 24px 28px 0;font-size:.92rem;color:var(--muted);counter-increment:s}
+.steps li+li{padding-left:24px;border-left:1px solid var(--line)}
+.steps li::before{content:counter(s);display:block;font-family:var(--serif);font-size:1.4rem;color:var(--teal);margin-bottom:6px;line-height:1.4}
+.steps b{display:block;font-weight:500;color:var(--ink);margin-bottom:6px}
+.merits{margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.merits div{padding:20px 0;border-top:1px solid var(--line);font-size:.93rem;color:var(--muted)}
+.merits b{display:block;font-weight:500;color:var(--ink);margin-bottom:4px}
+.proposal .caution{margin-top:32px;font-size:.8rem;color:var(--muted)}
+
+/* 店舗情報 */
+.shop{background:var(--mist)}
+.shop dl{display:grid;grid-template-columns:9em 1fr;border-top:1px solid var(--line);margin-bottom:56px}
+.shop dt,.shop dd{padding:18px 0;border-bottom:1px solid var(--line)}
+.shop dt{color:var(--muted);font-size:.9rem}
+.shop dd a{color:var(--teal)}
+.map{width:100%;height:auto;aspect-ratio:16/8;min-height:320px;border:0;display:block;background:#fff}
+.map-btn{text-align:center;margin-top:28px}
+
+/* お問い合わせ */
+.contact{text-align:center}
+.contact p{color:var(--muted);margin-bottom:36px}
+.contact .tel{display:block;font-family:var(--serif);font-size:clamp(1.8rem,5vw,2.6rem);letter-spacing:.12em;text-decoration:none;color:var(--teal);margin-bottom:12px}
+.contact .acts{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+
+footer{padding:40px 0;text-align:center;font-size:.8rem;color:var(--muted);border-top:1px solid var(--line)}
+
+@media (max-width:960px){
+  .fv{flex-direction:column;height:auto;min-height:0}
+  .fv-inner{flex-wrap:wrap}
+  .fv-side{flex:1 1 100%}
+  .fv{background-image:none;background:#0b0b0b}
+  .fv::before{content:"";position:relative;display:block;order:-1;width:100%;height:clamp(220px,48vw,380px);flex:none;background:url("images/hero.jpg") 72% center/cover no-repeat}
+  .fv-inner{width:100%;padding:48px 24px 56px}
+}
+@media (max-width:860px){
+  .voice-list{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .steps li:nth-child(odd){padding-left:0;border-left:0}
+  .steps li:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:760px){
+  section{padding:72px 0}
+  .fv-inner{gap:24px}
+  .fv h1{font-size:clamp(1.9rem,8vw,2.4rem)}
+  .fv-name{font-size:.8rem}
+  .fv-side{flex-basis:100%;margin:8px 0 0}
+  .fv-btn{display:block;min-width:0}
+  .split,.merits{grid-template-columns:1fr}
+  .split{gap:40px}
+  .split.right figure{order:0}
+  .split figure img,.split figure img.detail{aspect-ratio:4/3}
+  .shop dl{grid-template-columns:7em 1fr}
+  .map{aspect-ratio:4/3}
+  .btn{width:100%}
+  .steps{grid-template-columns:1fr}
+  .steps li,.steps li+li{padding:24px 0;border-left:0}
+  .steps li+li{border-top:1px solid var(--line)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<main id="top">
+
+  <!-- ファーストビュー -->
+  <section class="fv">
+    <div class="fv-inner">
+      <p class="fv-name">白樺クリーニング　<span>1973</span>年創業</p>
+      <h1>確かな手仕事で、<br>一着ずつ、丁寧に。</h1>
+      <div class="fv-side">
+        <p><span class="ph">札幌市白石区本通のクリーニング店。</span><br><span class="ph">アイロン掛けはすべて手仕上げ。</span><br><span class="ph">お電話一本の集配で、暮らしを支えます。</span></p>
+        <a class="fv-btn" href="#access">店舗情報を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- こだわり(画像:左) -->
+  <section>
+    <div class="wrap split">
+      <figure>
+        <img class="detail" src="images/detail.jpg" alt="仕上がった衣類のディテール" width="1402" height="768" loading="lazy">
+      </figure>
+      <div>
+        <h2>白樺クリーニングの<span class="ph">こだわり</span></h2>
+        <div class="strengths">
+        <article>
+          <h3>丁寧な手仕上げ</h3>
+          <p><span class="ph">お客様の大切な衣類を、</span><span class="ph">一点一点、</span><span class="ph">手作業で仕上げます。</span></p>
+        </article>
+        <article>
+          <h3>高品質なアイロン掛け</h3>
+          <p><span class="ph">ワイシャツも手仕上げ。</span><span class="ph">着ると気が引き締まる、</span><span class="ph">ピシッと伸びた状態でお渡しします。</span></p>
+        </article>
+        <article>
+          <h3>しみ抜き</h3>
+          <p><span class="ph">素材やシミの種類に合わせた薬品を使い、</span><span class="ph">技術を駆使して落としていきます。</span></p>
+        </article>
+        <article>
+          <h3>集配にも対応</h3>
+          <p><span class="ph">お電話一本で集配に伺います。</span><span class="ph">お忙しい方も、</span><span class="ph">気軽にご利用いただけます。</span></p>
+        </article>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 職人の仕事(画像:右) -->
+  <section class="craft">
+    <div class="wrap split right">
+      <figure>
+        <img src="images/craft.jpg" alt="手作業でアイロン掛けをする様子" width="900" height="675" loading="lazy">
+      </figure>
+      <div>
+        <h2>素材に合わせた、<span class="ph">お手入れを。</span></h2>
+        <p><span class="ph">素材別に、</span><span class="ph">適切なクリーニング方法を</span><span class="ph">プロの視点からアドバイスします。</span></p>
+        <p><span class="ph">皮革やカシミアなどの</span><span class="ph">特殊な素材にも対応。</span><span class="ph">他店で断られたお品物も、</span><span class="ph">お気軽にお持ちください。</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 店のこと -->
+  <section class="story">
+    <div class="wrap">
+        <h2>1973年創業、<span class="ph">白石の</span><span class="ph">クリーニング店。</span></h2>
+        <p><span class="ph">白樺クリーニングは、</span><span class="ph">1973年に創業しました。</span><span class="ph">長年クリーニング業に携わってきた先代の確かな技術とノウハウに、</span><span class="ph">新しい技術やお客様のニーズを重ねながら、</span><span class="ph">サービスの品質向上に努めています。</span></p>
+        <p><span class="ph">先代は、</span><span class="ph">アイロン掛けの全国大会でも</span><span class="ph">複数回の受賞経験があります。</span></p>
+        <p class="sign">代表　本間 大介</p>
+    </div>
+  </section>
+
+  <!-- お客様の声 -->
+  <section class="voice">
+    <div class="wrap">
+      <h2>お客様の声</h2>
+      <div class="voice-list">
+        <blockquote>
+          <span class="star" aria-label="5段階中4">★★★★<span>★</span></span>
+          先日、忘れかけてたお気に入りの白いシャツがクローゼットの奥から出てきて、着ようと思ったら、襟の黄ばみ汚れが…。ほぼあきらめムードで、しらかばさんに持って行ったら、なんと、真っ白にしてくれました。気に入ったものを長く着られて嬉しいです。ありがとうございます！
+        </blockquote>
+        <blockquote>
+          <span class="star" aria-label="5段階中5">★★★★★</span>
+          染み抜きが、とても上手で助かってます。
+        </blockquote>
+        <blockquote>
+          <span class="star" aria-label="5段階中5">★★★★★</span>
+          同業者ですが、人柄がとても素敵です。
+        </blockquote>
+      </div>
+      <p class="note">Googleマップに寄せられたクチコミより</p>
+    </div>
+  </section>
+
+  <!-- 有ればいいなと思うサービス -->
+  <section class="proposal">
+    <div class="wrap">
+      <span class="tag">ご提案</span>
+      <h2>有ればいいなと思うサービス</h2>
+      <p class="lead"><span class="ph">白樺クリーニング様に、</span><span class="ph">あったらうれしいと感じたサービスをご提案します。</span><span class="ph">駐車場がなく、</span><span class="ph">お子様連れや荷物の多い方、</span><span class="ph">お急ぎの方にも</span><span class="ph">受け取りやすい仕組みです。</span></p>
+
+      <h3>店頭車上お渡しサービス</h3>
+      <ol class="steps">
+        <li><b>事前にお電話</b><span class="ph">お渡し希望の</span><span class="ph">時間をお伝えします。</span></li>
+        <li><b>店の前に到着</b><span class="ph">車を店の前に停め、</span><span class="ph">お電話でお知らせします。</span></li>
+        <li><b>スタッフがお届け</b><span class="ph">仕上がった衣類を</span><span class="ph">車までお持ちします。</span></li>
+        <li><b>その場でお渡し</b><span class="ph">内容をご確認いただき、</span><span class="ph">お支払いを済ませます。</span></li>
+      </ol>
+
+      <div class="merits">
+        <div><b>車から降りずに受け取れる</b><span class="ph">お子様連れの方や、</span><span class="ph">お仕事の合間の方も</span><span class="ph">短い時間で受け取れます。</span></div>
+        <div><b>店舗周辺の混雑を防げる</b><span class="ph">お渡しの時間を事前に決めるため、</span><span class="ph">店の前での待ち時間も少なくなります。</span></div>
+      </div>
+      <p class="caution">※このセクションは企業様へのご提案です。現在ご提供中のサービスではありません。</p>
+    </div>
+  </section>
+
+  <!-- 店舗情報・アクセス -->
+  <section class="shop" id="access">
+    <div class="wrap">
+      <h2>店舗情報・アクセス</h2>
+      <dl>
+        <dt>店名</dt><dd>白樺クリーニング</dd>
+        <dt>住所</dt><dd>〒003-0026<br>北海道札幌市白石区本通17丁目南8-41</dd>
+        <dt>電話番号</dt><dd><a href="tel:0118622471">011-862-2471</a></dd>
+        <dt>営業時間</dt><dd>7:00～19:00</dd>
+        <dt>定休日</dt><dd>日曜日</dd>
+        <dt>アクセス</dt><dd>札幌市営地下鉄東西線 南郷18丁目駅より徒歩6分<br>JR北海道バス停留所「下白石」より徒歩4分</dd>
+        <dt>駐車場</dt><dd>なし</dd>
+        <dt>クレジットカード</dt><dd>使用可（VISA・MasterCard・JCB・AmericanExpress・Diners）</dd>
+        <dt>公式サイト</dt><dd><a href="https://www.shirakaba1973.com/" target="_blank" rel="noopener">https://www.shirakaba1973.com/</a></dd>
+      </dl>
+
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.3604087689973!2d141.43046257565493!3d43.03384789226881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f0b2b0b89968f6d%3A0x8cf22c6b5bcbfed6!2z55m95qi644Kv44Oq44O844OL44Oz44Kw!5e0!3m2!1sja!2sjp!4v1795655477913!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="白樺クリーニングの地図"></iframe>
+      <div class="map-btn">
+        <a class="btn line" href="https://www.google.com/maps/search/?api=1&query=%E7%99%BD%E6%A8%BA%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%20%E5%8C%97%E6%B5%B7%E9%81%93%E6%9C%AD%E5%B9%8C%E5%B8%82%E7%99%BD%E7%9F%B3%E5%8C%BA%E6%9C%AC%E9%80%9A17%E4%B8%81%E7%9B%AE%E5%8D%978-41" target="_blank" rel="noopener">地図を開く</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>お問い合わせ</h2>
+      <p><span class="ph">衣類のお手入れやシミについて、</span><span class="ph">お気軽にご相談ください。</span></p>
+      <a class="tel" href="tel:0118622471">011-862-2471</a>
+      <p style="margin-bottom:0">営業時間 7:00～19:00　定休日：日曜日</p>
+      <div class="acts">
+        <a class="btn" href="tel:0118622471">電話をかける</a>
+        <a class="btn line" href="https://shirakaba1973.net/contact/" target="_blank" rel="noopener">お問い合わせフォーム</a>
+        <a class="btn line" href="mailto:info@shirakaba1973.com">メールを送る</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 白樺クリーニング</div>
+</footer>
+
+</body>
+</html>
